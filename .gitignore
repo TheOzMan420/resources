@@ -1,0 +1,4 @@
+$ cat .gitignore
+[cfx-default]/*
+[maps]/*
+eup-stream/*
