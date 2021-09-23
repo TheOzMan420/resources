@@ -24,7 +24,8 @@ AddEventHandler('qb-trucker:server:DoBail', function(bool, vehInfo)
         if Bail[Player.PlayerData.citizenid] ~= nil then
             Player.Functions.AddMoney('cash', Bail[Player.PlayerData.citizenid], "trucker-bail-paid")
             Bail[Player.PlayerData.citizenid] = nil
-            TriggerClientEvent('QBCore:Notify', src, '$250 Deposit Refunded To Cash', 'success')
+            TriggerClientEvent('QBCore:Notify', src, '$250 Deposit Refunded To Cash', 'success') 
+            TriggerClientEvent('QBCore:Client:StoreTruckerJobVehicle', src)
         end
     end
 end)
