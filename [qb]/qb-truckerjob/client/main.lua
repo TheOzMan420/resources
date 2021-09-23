@@ -38,7 +38,6 @@ end)
 RegisterNetEvent('QBCore:Client:OnPlayerUnload')
 AddEventHandler('QBCore:Client:OnPlayerUnload', function()
     RemoveTruckerBlips()
-    CurrentLocation = nil
     CurrentBlip = nil
     hasBox = false
     isWorking = false
@@ -379,3 +378,9 @@ function DrawText3D(x, y, z, text)
     DrawRect(0.0, 0.0+0.0125, 0.017+ factor, 0.03, 0, 0, 0, 75)
     ClearDrawOrigin()
 end
+
+RegisterNetEvent('QBCore:Client:StoreTruckerJobVehicle')
+AddEventHandler('QBCore:Client:StoreTruckerJobVehicle', function()
+    RemoveTruckerBlips()
+    CurrentBlip = nil
+end)
